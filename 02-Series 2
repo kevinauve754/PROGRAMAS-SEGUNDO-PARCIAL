@@ -1,0 +1,22 @@
+//Kevin Eduardo González Avendaño
+//14/10/2020
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int cont=0, Ge, La, nn;
+
+    printf("Dame el valor de N en la tabla 2: \t");
+    scanf("%d", &nn);
+
+    while(cont<=(nn+(nn+1)))
+        {
+            Ge=cont;
+            La=(3*nn)+2*Ge;
+            printf("%d \t", La);
+            cont=cont+1;
+        }
+
+return 0;
+}
