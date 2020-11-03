@@ -1,0 +1,148 @@
+//KEVIN EDUARDO GONZALEZ AVENDAÑO
+#include <stdio.h>
+
+int main()
+{
+    int opc,su=0;
+    while(opc!=4)
+    {
+    printf("Seleccione El Programa Que Desea Utilizar\n");
+    printf("\n1.Figuras triangulares con asteriscos \n2.Calcular el valor de PI \n3.Secuencias de valores a) b) c) d) \n4.Salir \n");
+    scanf("%i",&opc);
+
+    if(opc==1)
+    {
+        int AN, DA, XO;
+        int ne=4;
+        int ia=2;
+        int na=1;
+        int ie=-1;
+        printf ("A)\n");
+        for (AN=1;AN<=10;AN++)
+            {
+                for (XO=1;XO<=AN;XO++)
+                {
+                    printf ("*");
+                }
+                printf ("\n");
+            }
+            printf ("B)\n");
+            for (AN=1;AN<=10;AN++)
+                {
+                    for (XO=AN;XO<=10;XO++)
+                    {
+                        printf ("*");
+                    }
+                    printf ("\n");
+                    }
+                    printf ("C)\n");
+                    for (AN=1;AN<=10;AN++)
+                        {
+                            for (DA=2;DA<=AN;DA++)
+                            {
+                                printf (" ");
+                            }
+                            for (XO=10;XO>=AN;XO--)
+                                {
+                                    printf ("*");
+                                }
+                                printf ("\n");
+                                }
+                                printf ("D)\n");
+                                for (AN=1;AN<=10;AN++)
+                                    {
+                                        for (DA=9;DA>=AN;DA--)
+                                        {
+                                            printf(" ");
+                                        }
+                                        for (XO=1;XO<=AN;XO++)
+                                            {
+                                                printf("*");
+                                            }
+                                            printf ("\n");
+                                            }
+}//fin de programaaaaa
+
+    else if(opc==2)
+        {
+            int DA,AN,XO=1;
+            double PI = 0, RE;
+            printf("Escriba el valor a calcular: ");
+            scanf("%d",&AN);
+            for (DA=0;DA<AN;DA++)
+                {
+                    RE=4/(double)XO;
+                    if (DA % 2 == 1)
+                        {
+                            PI-=RE;
+                        }
+                        else
+                            {
+                                PI+=RE;
+                            }
+                            XO+= 2;
+                }
+        printf("El valor para PI es: %.16f", PI);
+}//fin de programaaaaaa
+
+    else if(opc==3)
+        {
+            int AN, XO, DA, LA, SU;
+            printf ("Coloque con numero cuantas veces quiere que se muestre cada secuencia\n");
+            scanf ("%d",&AN);
+            XO=1;
+            DA=1;
+            LA=1;
+            SU=1;
+            printf ("\nA):");
+            while (XO<=AN)
+                {
+                    int i=-1;
+                    for (XO=1;XO<=AN;XO++)
+                {
+                    i=i+2;
+                    printf ("%d, ",i);
+                }
+                }
+                printf ("\nB):");
+                while (DA<=AN)
+                    {
+                        int i=0;
+                        for (DA=1;DA<=AN;DA++)
+                            {
+                                i=i+3;
+                                printf ("%d, ",i);
+                            }
+                    }
+                    printf ("\nC):");
+                    while (LA<=AN)
+                        {
+                            int i=40;
+                            for (LA=1;LA<=AN;LA++)
+                                {
+                                    i=i-10;
+                                    printf ("%d, ",i);
+                                }
+                        }
+                        printf ("\nD):");
+                        while (SU<=AN)
+                        {
+                            int i=7;
+                            for (SU=1;SU<=AN;SU++)
+                        {
+                            i=i+8;
+                            printf ("%d, ",i);
+                        }
+                        }
+        }
+    else if(opc==4)
+    {
+        printf("ADIOOOOOOOOOOS");
+    }
+
+    getch();
+
+    system("cls");
+}
+return 0;
+}
